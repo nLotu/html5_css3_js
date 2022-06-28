@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Evaluación Unidad XII</title>
+	<!-- tipografia de google -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+	
+	<!--Bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<!--Hoja de estilos-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!--responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--iconos -->
+	<link rel="stylesheet" href="icon.css">
+</head>
+<body>
+	<header>
+		<div id="marca">
+			<h1>CANSI</h1>
+		</div>		
+		<nav id="btn_responsive">
+			<a onclick="menuHambur()"><span class="icon-menu"></span></a>
+		</nav>		
+		<nav id="btn_header">
+			<ul>
+				<li><a href="#home">Home</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#trabajo">Trabajos</a></li><li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="home">
+		<h2>Home</h2>
+		<div class="container-fluid" id="cont_home">
+			<div class="row" id="mod_home">
+				<div class="col-sm-8" id="col_img_home">
+					<div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							  <div class="carousel-item active">
+								<img src="images/img_home.jpg" class="img-fluid">
+							  </div>
+							  <div class="carousel-item">
+								<img src="images/img_home2.jpg" class="img-fluid">
+							  </div>
+							  <div class="carousel-item">
+								<img src="images/img_home3.jpg" class="img-fluid">
+							  </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4" id="col_txt_home">
+					<h3>Amoblamientos de diseño</h3>
+					<p>Esa idea que da vueltas por tu cabeza, nosotros la hacemos realidad!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="nosotros">
+		<h2>Nosotros</h2>
+		<div id="img1_nos">
+			<img src="images/nos1.jpeg">
+		</div>
+		<div id="img2_nos">
+			<img src="images/nos2.jpeg">
+		</div>
+		<div id="img3_nos">
+			<img src="images/nos3.jpeg">
+		</div>
+		<div id="txt_nos">
+			<p>En<span> CANSI </span> tenemos más de 30 años en el rubro, hace tu consulta y nuestros profesionales te ayudarán a hacer realidad tus proyectos.</p>
+			<p>Nos especializamos en equipamientos comerciales, muebles de Cocina, placards, vestidores, islas, decks. Diseños a medida y una amplia gama de productos relacionados a la carpintería.</p>
+		</div>
+	</section>
+	<section id="trabajo">
+		<h2>Trabajos</h2>
+		<nav id="btn_trabajo">
+			<ul>
+				<li><a onclick="menuTrabajo('cocinas')" >Cocinas</a></li>
+				<li><a onclick="menuTrabajo('muebles')">Muebles</a></li>
+				<li><a onclick="menuTrabajo('pisos')">Pisos</a></li>
+				<li><a onclick="menuTrabajo('vinoteca')">Vinotecas</a></li>
+			</ul>
+		</nav>
+		<div id="img_trabajo"></div>
+	</section>
+	<section id="contacto">
+		<h2>Contacto</h2>
+		<!--cajas con bootstrap-->
+		<div class="container-fluid" id="cont_contacto">
+			<div class="row" id="mod_contacto">
+				<div class="col-lg-3 col-sm-4" id="dat_cont">
+					<h3>Datos de contacto</h3>
+					<p>Telefono: 3516506895</p>
+					<p>Mail: cansi@gmail.com</p>
+					<div class="card"  id="tarjeta">
+						<img src="images/Ubicacion.jpg" class="card-img-top">
+						<div class="card-body">
+						  <h5 class="card-title">Ubicacion</h5>
+						  <p class="card-text">AV Cornelio Saavedra 3493</p>
+						  <a href="https://www.google.com.ar/maps/place/Av.+Cornelio+Saavedra+3493,+C%C3%B3rdoba/@-31.3736207,-64.1964138,19z/data=!4m5!3m4!1s0x943298ffeba61c55:0x4e33e54604cf0a3b!8m2!3d-31.3735646!4d-64.196395" class="btn btn-primary" target="new">Ir a Maps</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 offset-lg-1 col-sm-8" id="form_cont">
+					<h3>Contactanos mediante el siguiente formulario</h3>
+					<form>
+						<label>Nombre</label>
+						<input type="text" name="nombre" class="form-control margin_bot" required maxlength="20">
+						<label>Correo Electrónico</label>		
+						<input type="email" name="correo" class="form-control margin_bot" required>
+						<label>Consulta</label>
+						<textarea class="form-control margin_bot" rows="8" required></textarea>
+						<input type="submit" class="btn btn-primary margin_bot">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--fin cajas con bootstrap-->
+	</section>
+	<footer>
+		<div id="btn_footer">
+			<ul>
+				<li><a><span class="icon-facebook"></span></a></li>
+				<li><a><span class="icon-instagram"></span></a></li>
+				<li><a><span class="icon-whatsapp"></span></a></li>
+			</ul>
+		</div>
+		<div id="txt_footer">
+			<p>Desarrollado por Nelson Lotumolo</p>
+			<p>nelsonfabianlotumolo@gmail.com</p>
+		</div>
+	</footer>
+
+	<!--vinculo js al final ya que necesita que cargue todo el html-->
+	<script type="text/javascript" src="js/unidad8.js"></script>
+
+	<!--script Bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
